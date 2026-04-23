@@ -48,6 +48,39 @@
   z-index: 1;
 }
 
+/* Vignette Overlay (scroll-driven) */
+.hero-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  /* Vinheta radial: cantos escuros, centro transparente */
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, var(--vignette-intensity, 0)) 70%,
+    rgba(0, 0, 0, var(--vignette-intensity, 0)) 100%
+  );
+  /* Escurecimento geral por cima */
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, var(--vignette-intensity, 0));
+  transition: none; /* JS controla diretamente, sem lag */
+}
+
+/* Extra darkening layer via pseudo-element */
+.hero-vignette::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, var(--darken-opacity, 0));
+}
+
 /* Content */
 .hero-content {
   position: relative;
@@ -84,7 +117,7 @@
 
 /* Main Heading */
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
@@ -119,7 +152,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -149,35 +182,6 @@
 .hero-cta:hover {
   color: var(--primary-black);
   border-color: var(--stone-gray);
-}
-
-/* Scroll Indicator */
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  opacity: 0;
-  animation: heroFadeIn 1s ease-out 1.3s forwards;
-}
-
-.hero-scroll-indicator span {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--neutral-gray);
-}
-
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--stone-gray), transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
 }
 
 /* =========================================
