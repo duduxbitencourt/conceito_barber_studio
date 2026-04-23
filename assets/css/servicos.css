@@ -151,11 +151,12 @@
   z-index: 1;
 }
 
-.servico-icon svg {
-  width: 30px;
-  height: 30px;
-  fill: var(--stone-gray);
-  transition: fill 0.4s ease;
+.servico-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: invert(70%) sepia(5%) saturate(500%) hue-rotate(10deg) brightness(90%);
+  transition: filter 0.4s ease;
 }
 
 .servico-card:hover .servico-icon {
@@ -168,8 +169,8 @@
   box-shadow: 0 0 20px rgba(166, 159, 149, 0.1);
 }
 
-.servico-card:hover .servico-icon svg {
-  fill: var(--pure-white);
+.servico-card:hover .servico-icon img {
+  filter: invert(100%) brightness(100%);
 }
 
 /* Title */
@@ -244,8 +245,8 @@
     height: 60px;
   }
 
-  .servico-icon svg {
-    width: 26px;
-    height: 26px;
+  .servico-icon img {
+    width: 28px;
+    height: 28px;
   }
 }
