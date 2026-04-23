@@ -100,4 +100,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         revealCards.forEach(card => revealObserver.observe(card));
     }
+
+    // =========================================
+    // Back to Top Button
+    // =========================================
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
