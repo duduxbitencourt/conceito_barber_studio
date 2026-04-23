@@ -1,0 +1,29 @@
+/* 
+  Estilos Globais - Conceito Barber Studio
+  Paleta:
+  Primary Black: #000000
+  Stone Gray: #A69F95
+  Neutral Gray: #7A7A7A
+  Pure White: #FFFFFF
+  Steel Blue: #606B73
+*/
+
+:root {
+  --primary-black: #000000;
+  --stone-gray: #A69F95;
+  --neutral-gray: #7A7A7A;
+  --pure-white: #FFFFFF;
+  --steel-blue: #606B73;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Será atualizado conforme identidade visual */
+  background-color: var(--primary-black);
+  color: var(--pure-white);
+}
