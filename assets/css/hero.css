@@ -1,0 +1,255 @@
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: -80px; /* Compensa o padding-top do body para o hero ficar fullscreen */
+  padding-top: 80px;
+}
+
+/* Background Image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Dark Overlay */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: heroFadeIn 1.2s ease-out forwards;
+}
+
+/* Decorative Line */
+.hero-content::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--stone-gray);
+  margin: 0 auto 2rem auto;
+  animation: lineExpand 1s ease-out 0.5s forwards;
+  transform: scaleX(0);
+}
+
+/* Subtitle (above heading) */
+.hero-subtitle {
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--stone-gray);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease-out 0.3s forwards;
+}
+
+/* Main Heading */
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--pure-white);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease-out 0.5s forwards;
+}
+
+.hero-title span {
+  color: var(--stone-gray);
+  font-weight: 300;
+}
+
+/* Supporting Text */
+.hero-description {
+  font-size: 1rem;
+  color: var(--neutral-gray);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease-out 0.7s forwards;
+}
+
+/* CTA Button */
+.hero-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--stone-gray);
+  color: var(--pure-white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease-out 0.9s forwards;
+}
+
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--stone-gray);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.hero-cta:hover::before {
+  left: 0;
+}
+
+.hero-cta:hover {
+  color: var(--primary-black);
+  border-color: var(--stone-gray);
+}
+
+/* Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: heroFadeIn 1s ease-out 1.3s forwards;
+}
+
+.hero-scroll-indicator span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--neutral-gray);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--stone-gray), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineExpand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+}
+
+/* =========================================
+   Media Queries - Hero
+   ========================================= */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+
+  .hero-title {
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-cta {
+    padding: 0.9rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 1.5rem;
+  }
+}
