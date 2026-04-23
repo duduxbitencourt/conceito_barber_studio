@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conceito Barber Studio</title>
-    <meta name="description" content="Landing page institucional para divulgação de serviços, portfólio e agendamentos de uma barbearia local.">
+    <meta name="description"
+        content="Landing page institucional para divulgação de serviços, portfólio e agendamentos de uma barbearia local.">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
 </head>
+
 <body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Botão Hamburguer (Mobile) -->
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <h2>CONCEITO <span>BARBER STUDIO</span></h2>
+            </a>
+
+            <!-- Navegação Desktop / Menu Mobile -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                    <li><a href="#agendamento" class="nav-link btn-agendamento">Agendamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 
     <!-- Conteúdo principal -->
 
     <script src="js/main.js" type="module"></script>
 </body>
+
 </html>
