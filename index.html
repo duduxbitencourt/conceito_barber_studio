@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/servicos.css">
 </head>
 
 <body>
@@ -53,11 +54,87 @@
         </div>
     </section>
 
-    <!-- Conteúdo principal -->
+    <!-- Sobre Section -->
     <section id="sobre" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 4rem 2rem;">
         <div style="max-width: 800px; text-align: center;">
             <h2 style="font-size: 2rem; margin-bottom: 1rem; letter-spacing: 2px;">SOBRE NÓS</h2>
             <p style="color: var(--neutral-gray); line-height: 1.8;">Conteúdo em breve...</p>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="servicos-header">
+            <span class="section-label">O que oferecemos</span>
+            <h2>NOSSOS MELHORES SERVIÇOS <span>QUE OFERECEMOS A VOCÊ</span></h2>
+        </div>
+
+        <div class="servicos-grid">
+            <!-- Card 1 — Corte de Cabelo -->
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16Zm0-2q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/>
+                    </svg>
+                </div>
+                <h3 class="servico-title">Corte de Cabelo</h3>
+                <p class="servico-description">Utilizamos várias técnicas para os mais diversos tipos de corte, que vão dos tradicionais, clássicos aos mais modernos, conforme o gosto e estilo de cada cliente.</p>
+            </div>
+
+            <!-- Card 2 — Barba -->
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.12.23-2.18.65-3.15C5.57 10.3 7.58 12 10 12c1.33 0 2.57-.53 3.5-1.42.44.58.97 1.08 1.58 1.47C14.08 14.78 12 17.35 12 20zm3-12c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+                    </svg>
+                </div>
+                <h3 class="servico-title">Barba</h3>
+                <p class="servico-description">Uma experiência agradável e relaxante, que mescla técnicas tradicionais e produtos modernos, como toalha quente, espuma especial e hidratação facial.</p>
+            </div>
+
+            <!-- Card 3 — Barba Terapia -->
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M17.73 12.02l3.98-3.98a.996.996 0 0 0 0-1.41l-4.34-4.34a.996.996 0 0 0-1.41 0l-3.98 3.98L8 2.29a1.001 1.001 0 0 0-1.41 0L2.25 6.63a.996.996 0 0 0 0 1.41l3.98 3.98L2.25 16a.996.996 0 0 0 0 1.41l4.34 4.34c.39.39 1.02.39 1.41 0l3.98-3.98 3.98 3.98c.39.39 1.02.39 1.41 0l4.34-4.34a.996.996 0 0 0 0-1.41l-3.98-3.98zM12 9c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-4.71 1.96L3.66 7.34l3.63-3.63 3.62 3.62-3.62 3.63zM10 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2.66 9.34l-3.63-3.62 3.63-3.63 3.62 3.63-3.62 3.62z"/>
+                    </svg>
+                </div>
+                <h3 class="servico-title">Barba Terapia</h3>
+                <p class="servico-description">Terapia por vapor de Ozônio feita através do aparelho BEAUTY STEAM. Além de abrir os poros, a técnica ajuda a prevenir acne e pelos encravados.</p>
+            </div>
+
+            <!-- Card 4 — Hidratação -->
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2zm-3.35-5.02c.14.55.69.87 1.24.73.55-.14.87-.69.73-1.24-.38-1.51.61-2.46 1.56-3.37.47-.45.95-.9 1.3-1.46.35-.56.52-1.22.37-2.05-.14-.76-.53-1.39-1.02-1.87-.39.77-.87 1.53-1.44 2.26-.43.55-.6 1.15-.48 1.76-.73.69-1.32 1.42-1.58 2.23-.31.97-.17 2.04.32 3.01z"/>
+                    </svg>
+                </div>
+                <h3 class="servico-title">Hidratação</h3>
+                <p class="servico-description">A hidratação recupera e revitaliza tanto o cabelo quanto o rosto. Temos as duas opções para deixar sua pele e cabelo ainda mais saudáveis.</p>
+            </div>
+
+            <!-- Card 5 — Esfoliação -->
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                </div>
+                <h3 class="servico-title">Esfoliação</h3>
+                <p class="servico-description">Além de eliminar as células mortas, a esfoliação deixa sua pele macia, limpa, uniforme e lisa. Quando feita após o barbear, previne pelos encravados.</p>
+            </div>
+
+            <!-- Card 6 — Tratamento Alta Frequência -->
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                    </svg>
+                </div>
+                <h3 class="servico-title">Tratamento Alta Frequência</h3>
+                <p class="servico-description">Este procedimento descontamina toda a pele e ainda cessa todos os processos inflamatórios, dando à pele um aspecto novo e saudável.</p>
+            </div>
         </div>
     </section>
 

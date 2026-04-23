@@ -79,4 +79,25 @@ document.addEventListener("DOMContentLoaded", () => {
         // Estado inicial
         updateVignette();
     }
+
+    // =========================================
+    // Scroll Reveal — Service Cards
+    // =========================================
+    const revealCards = document.querySelectorAll('.servico-card');
+
+    if (revealCards.length > 0) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealCards.forEach(card => revealObserver.observe(card));
+    }
 });
